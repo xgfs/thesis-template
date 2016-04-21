@@ -1,0 +1,53 @@
+\documentclass[a4paper,14pt]{extreport}
+
+\usepackage{iftex}
+
+\newif\ifxetexorluatex
+\ifXeTeX
+    \xetexorluatextrue
+\else
+    \ifLuaTeX
+        \xetexorluatextrue
+    \else
+        \xetexorluatexfalse
+    \fi
+\fi
+
+\usepackage{geometry}
+\ifxetexorluatex
+    \usepackage{polyglossia}
+\else
+	\RequirePDFTeX
+	\usepackage{cmap}
+	\usepackage[T2A]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english,russian]{babel}    % russian is necessary, because GOST 7.0.5 is in Russian
+\fi
+\usepackage{indentfirst}
+
+\usepackage{amsthm,amsfonts,amsmath,amssymb,amscd} % Math fonts from AMS
+\usepackage{mathtools}
+
+\usepackage[dvipsnames,usenames]{color}
+
+\usepackage{booktabs}
+\usepackage{pgfplots}
+
+\usepackage{cite}
+\usepackage[linktocpage=true,plainpages=false,pdfpagelabels=true]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{epstopdf}
+
+\usepackage{soulutf8} 
+\usepackage{hyperref}
+
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage{tocloft}
